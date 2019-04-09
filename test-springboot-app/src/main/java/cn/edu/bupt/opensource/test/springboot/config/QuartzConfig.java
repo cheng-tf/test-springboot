@@ -1,6 +1,6 @@
 package cn.edu.bupt.opensource.test.springboot.config;
 
-import cn.edu.bupt.opensource.test.springboot.job.MyScheduleTask;
+import cn.edu.bupt.opensource.test.springboot.job.ScheduleTask;
 import org.quartz.Trigger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,7 +20,7 @@ public class QuartzConfig {
      * 定时任务
      */
     @Bean(name = "jobDetail")
-    public MethodInvokingJobDetailFactoryBean detailFactoryBean(MyScheduleTask task) {
+    public MethodInvokingJobDetailFactoryBean detailFactoryBean(ScheduleTask task) {
         MethodInvokingJobDetailFactoryBean jobDetail = new MethodInvokingJobDetailFactoryBean();
         jobDetail.setConcurrent(true);
         jobDetail.setName("scheduler1");
