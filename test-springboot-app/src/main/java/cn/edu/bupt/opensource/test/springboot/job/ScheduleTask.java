@@ -10,15 +10,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
+ * 定时任务类
  * @author chengtf
- * @date 2019/4/9
+ * @date 2019/4/10
  */
-@Configuration
 @Component
+@Configuration
 @EnableScheduling
-public class MyScheduleTask {
+public class ScheduleTask {
 
-    private static final Logger log = LoggerFactory.getLogger(MyScheduleTask.class);
+    private static final Logger log = LoggerFactory.getLogger(ScheduleTask.class);
 
     public void myScheduleMethod() {
         // 实际业务
